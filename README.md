@@ -84,7 +84,7 @@ data_average = data.copy()
 data_single = data.copy()
 
 
-# Computer DTW Matrix
+# Compute DTW Matrix
 load_curves = data.iloc[:,4:].to_numpy()
 adjacency_matrix = dtw.distance_matrix_fast(load_curves,window=WINDOW_SIZE,parallel=True)
 adjacency_matrix = fill_dtw_matrix(adjacency_matrix)
